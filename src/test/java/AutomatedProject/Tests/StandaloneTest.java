@@ -16,6 +16,8 @@ import AutomatedProject.AutomatedProject.pageobjects.OrderPage;
 import AutomatedProject.AutomatedProject.pageobjects.ProductCatalogue;
 
 public class StandaloneTest {
+	
+	// stand alone test 
 
 	public static void main(String[] args) throws InterruptedException {
 
