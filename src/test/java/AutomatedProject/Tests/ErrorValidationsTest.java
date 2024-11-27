@@ -1,7 +1,6 @@
 package AutomatedProject.Tests;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.util.List;
 
@@ -15,6 +14,8 @@ public class ErrorValidationsTest extends BaseTest {
 
 	@Test
 	public void LoginErrorValidation() throws IOException, InterruptedException {
+		
+		//testing for CI/CD
 
 		landingPage.loginApplication("ffiii1@aol.com", "Esther!0");
 		Assert.assertEquals("Incorrect email or password.", landingPage.getErrorMessage());
