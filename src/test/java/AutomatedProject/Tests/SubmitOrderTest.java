@@ -1,11 +1,12 @@
 package AutomatedProject.Tests;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import AutomatedProject.AutomatedProject.pageobjects.CardInfo;
@@ -19,11 +20,11 @@ public class SubmitOrderTest extends BaseTest {
 	
 	String expectedResult = "ADIDAS ORIGINAL";
 
-	@Test
-	public void submitOrder() throws IOException, InterruptedException {
+	@Test(dataProvider="getData")
+	public void submitOrder(HashMap<String, String> input) throws IOException, InterruptedException {
 
 		String expectedValidation = "THANKYOU FOR THE ORDER.";
-		ProductCatalogue productCatalogue = landingPage.loginApplication("ffiii1@aol.com", "Esther!00");
+		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 		List<WebElement> products = productCatalogue.getProductList();
 		productCatalogue.addProductToCart(products, expectedResult);
 		MyCart myCart = productCatalogue.goToCartPage();
@@ -37,13 +38,21 @@ public class SubmitOrderTest extends BaseTest {
 	}
 	
 	
-	@Test(dependsOnMethods = {"submitOrder"})
-	public void OrderHistoryTest() throws InterruptedException {
+	@Test(dataProvider="getData",dependsOnMethods = {"submitOrder"})
+	public void OrderHistoryTest(HashMap<String, String> input) throws InterruptedException {
 		
-		ProductCatalogue productCatalogue = landingPage.loginApplication("ffiii1@aol.com", "Esther!00");
+		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 		OrderPage orderPage = productCatalogue.goToOrdersPage();
 		Assert.assertTrue(orderPage.VerifyOrderDisplay(expectedResult));
 		
+	}
+	
+	@DataProvider
+	public Object[][] getData() throws IOException {
+		
+		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir") + "//src//test//java//AutomatedProject//data//PurchaseOrder.json");
+		
+		return new Object[][] {{data.get(0)}};
 	}
 
 }
