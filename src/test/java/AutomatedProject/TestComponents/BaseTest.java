@@ -36,7 +36,8 @@ public class BaseTest {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
 				+ "//src//main//java//AutomatedProject//resources//GlobalData.properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
+		
+		String browserName =  System.getProperty("browser")!=null ?  System.getProperty("browser") : prop.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 
@@ -44,7 +45,7 @@ public class BaseTest {
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 
-			// Firefox code
+			System.setProperty("webdriver.gecko.driver", "/Users/fredfraser/Grid/geckodriver");
 			driver = new FirefoxDriver();
 
 		} else if (browserName.equalsIgnoreCase("edge")) {

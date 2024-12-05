@@ -1,79 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="1" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-02T17:22:25 EST" name="Suite" finished-at="2024-12-02T17:22:52 EST" duration-ms="27013">
+  <suite started-at="2024-12-05T17:32:42 EST" name="Suite" finished-at="2024-12-05T17:33:12 EST" duration-ms="30294">
     <groups>
     </groups>
-    <test started-at="2024-12-02T17:22:25 EST" name="Error Validations Test" finished-at="2024-12-02T17:22:52 EST" duration-ms="26905">
-      <class name="AutomatedProject.Tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-02T17:22:25 EST" name="launchApplication" finished-at="2024-12-02T17:22:34 EST" duration-ms="8659" status="PASS">
+    <test started-at="2024-12-05T17:32:42 EST" name="Submit Order Test" finished-at="2024-12-05T17:33:00 EST" duration-ms="17818">
+      <class name="AutomatedProject.Tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-05T17:32:42 EST" name="launchApplication" finished-at="2024-12-05T17:32:56 EST" duration-ms="13669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-02T17:22:34 EST" name="LoginErrorValidation" finished-at="2024-12-02T17:22:35 EST" duration-ms="1088" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-05T17:32:56 EST" name="submitOrder" data-provider="getData" finished-at="2024-12-05T17:32:58 EST" duration-ms="2259" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Esther!00, email=ffiii1@aol.com}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[Element <button class="btn btn-custom"> is not clickable at point (1438,26) because another element <div class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted"> obscures it
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.7.1', java.version: '21.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [60ca9bfa-2170-4da8-9dac-e45c78b2fc96, clickElement {id=d8b1e55c-4dfe-40b6-82c1-58c1cd17feeb}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:21392, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 22.6.0, moz:processID: 24688, moz:profile: /var/folders/sm/yw_v6jg1053..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:21392/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[FirefoxDriver: firefox on mac (60ca9bfa-2170-4da8-9dac-e45c78b2fc96)] -> css selector: [routerlink*='cart']]
+Session ID: 60ca9bfa-2170-4da8-9dac-e45c78b2fc96]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <button class="btn btn-custom"> is not clickable at point (1438,26) because another element <div class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted"> obscures it
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.7.1', java.version: '21.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [60ca9bfa-2170-4da8-9dac-e45c78b2fc96, clickElement {id=d8b1e55c-4dfe-40b6-82c1-58c1cd17feeb}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:21392, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 22.6.0, moz:processID: 24688, moz:profile: /var/folders/sm/yw_v6jg1053..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:21392/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[FirefoxDriver: firefox on mac (60ca9bfa-2170-4da8-9dac-e45c78b2fc96)] -> css selector: [routerlink*='cart']]
+Session ID: 60ca9bfa-2170-4da8-9dac-e45c78b2fc96
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at AutomatedProject.AbstractComponents.AbstractComponent.goToCartPage(AbstractComponent.java:55)
+at AutomatedProject.Tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-02T17:22:35 EST" name="tearDown" finished-at="2024-12-02T17:22:35 EST" duration-ms="155" status="PASS">
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-05T17:32:59 EST" name="tearDown" finished-at="2024-12-05T17:33:00 EST" duration-ms="1176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-02T17:22:35 EST" name="launchApplication" finished-at="2024-12-02T17:22:48 EST" duration-ms="12749" status="PASS">
+        <test-method signature="OrderHistoryTest(java.util.HashMap)[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-05T17:33:00 EST" name="OrderHistoryTest" finished-at="2024-12-05T17:33:00 EST" depends-on-methods="AutomatedProject.Tests.SubmitOrderTest.submitOrder" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AutomatedProject.Tests.SubmitOrderTest.OrderHistoryTest() on instance AutomatedProject.Tests.SubmitOrderTest@72e5a8e depends on not successfully finished methods 
+[AutomatedProject.Tests.SubmitOrderTest.submitOrder() on instance AutomatedProject.Tests.SubmitOrderTest@72e5a8e]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AutomatedProject.Tests.SubmitOrderTest.OrderHistoryTest() on instance AutomatedProject.Tests.SubmitOrderTest@72e5a8e depends on not successfully finished methods 
+[AutomatedProject.Tests.SubmitOrderTest.submitOrder() on instance AutomatedProject.Tests.SubmitOrderTest@72e5a8e]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+      </class> <!-- AutomatedProject.Tests.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
+    <test started-at="2024-12-05T17:32:42 EST" name="Error Validations Test" finished-at="2024-12-05T17:33:12 EST" duration-ms="30294">
+      <class name="AutomatedProject.Tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-05T17:32:42 EST" name="launchApplication" finished-at="2024-12-05T17:32:54 EST" duration-ms="12038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="ProductErrorValidation()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-02T17:22:48 EST" name="ProductErrorValidation" finished-at="2024-12-02T17:22:52 EST" duration-ms="4062" status="PASS">
+        <test-method signature="LoginErrorValidation()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-05T17:32:54 EST" name="LoginErrorValidation" finished-at="2024-12-05T17:32:55 EST" duration-ms="965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-05T17:32:55 EST" name="tearDown" finished-at="2024-12-05T17:32:56 EST" duration-ms="980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-05T17:32:56 EST" name="launchApplication" finished-at="2024-12-05T17:33:09 EST" duration-ms="13036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="ProductErrorValidation()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-05T17:33:09 EST" name="ProductErrorValidation" finished-at="2024-12-05T17:33:11 EST" duration-ms="2148" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[Element <button class="btn btn-custom"> is not clickable at point (1438,26) because another element <div class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted"> obscures it
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.7.1', java.version: '21.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [adac069d-7462-4955-b07d-f4c8be0e9299, clickElement {id=4f28b763-f346-4265-bda6-6e750da8ec01}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:6788, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 22.6.0, moz:processID: 24710, moz:profile: /var/folders/sm/yw_v6jg1053..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:6788/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[FirefoxDriver: firefox on mac (adac069d-7462-4955-b07d-f4c8be0e9299)] -> css selector: [routerlink*='cart']]
+Session ID: adac069d-7462-4955-b07d-f4c8be0e9299]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <button class="btn btn-custom"> is not clickable at point (1438,26) because another element <div class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted"> obscures it
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.7.1', java.version: '21.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [adac069d-7462-4955-b07d-f4c8be0e9299, clickElement {id=4f28b763-f346-4265-bda6-6e750da8ec01}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.0, moz:accessibilityChecks: false, moz:buildID: 20240704121409, moz:debuggerAddress: 127.0.0.1:6788, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 22.6.0, moz:processID: 24710, moz:profile: /var/folders/sm/yw_v6jg1053..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:6788/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[FirefoxDriver: firefox on mac (adac069d-7462-4955-b07d-f4c8be0e9299)] -> css selector: [routerlink*='cart']]
+Session ID: adac069d-7462-4955-b07d-f4c8be0e9299
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at AutomatedProject.AbstractComponents.AbstractComponent.goToCartPage(AbstractComponent.java:55)
+at AutomatedProject.Tests.ErrorValidationsTest.ProductErrorValidation(ErrorValidationsTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ProductErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-02T17:22:52 EST" name="tearDown" finished-at="2024-12-02T17:22:52 EST" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomatedProject.Tests.ErrorValidationsTest@7bba5817]" started-at="2024-12-05T17:33:11 EST" name="tearDown" finished-at="2024-12-05T17:33:12 EST" duration-ms="742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- AutomatedProject.Tests.ErrorValidationsTest -->
     </test> <!-- Error Validations Test -->
-    <test started-at="2024-12-02T17:22:25 EST" name="Submit Order Test" finished-at="2024-12-02T17:22:52 EST" duration-ms="27013">
-      <class name="AutomatedProject.Tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-02T17:22:25 EST" name="launchApplication" finished-at="2024-12-02T17:22:34 EST" duration-ms="8949" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-02T17:22:34 EST" name="submitOrder" data-provider="getData" finished-at="2024-12-02T17:22:40 EST" duration-ms="5889" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Esther!00, email=ffiii1@aol.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-02T17:22:40 EST" name="tearDown" finished-at="2024-12-02T17:22:40 EST" duration-ms="147" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-02T17:22:40 EST" name="launchApplication" finished-at="2024-12-02T17:22:47 EST" duration-ms="6918" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest(java.util.HashMap)[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-02T17:22:47 EST" name="OrderHistoryTest" data-provider="getData" finished-at="2024-12-02T17:22:52 EST" depends-on-methods="AutomatedProject.Tests.SubmitOrderTest.submitOrder" duration-ms="4777" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Esther!00, email=ffiii1@aol.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomatedProject.Tests.SubmitOrderTest@72e5a8e]" started-at="2024-12-02T17:22:52 EST" name="tearDown" finished-at="2024-12-02T17:22:52 EST" duration-ms="131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- AutomatedProject.Tests.SubmitOrderTest -->
-    </test> <!-- Submit Order Test -->
   </suite> <!-- Suite -->
 </testng-results>
