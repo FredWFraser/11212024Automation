@@ -18,6 +18,8 @@ import AutomatedProject.TestComponents.BaseTest;
 
 public class SubmitOrderTest extends BaseTest {
 	
+	// comment for test 12/10/2024
+	
 	String expectedResult = "ADIDAS ORIGINAL";
 
 	@Test(dataProvider="getData")
